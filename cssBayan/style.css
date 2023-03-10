@@ -1,0 +1,56 @@
+.container {
+    width: 60%;
+    margin: 0 auto;
+}
+h2 {
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+.container input{
+    display: none;
+}
+.container article {
+    height: 0;
+    background-color: #dedede;
+    font-size: 18px;
+    line-height: 20px;
+    padding: 0 15px;
+    transition: all .5s;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 0 0 10px 10px;
+}
+.container label {
+    cursor: pointer;
+    background-color: #505050;
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    width: 100%;
+    color: #fff;
+    font-weight: 300;
+    box-sizing: border-box;
+    z-index: 5; 
+    border-radius: 10px 10px 0 0;
+    font-size: 20px;
+    margin: 0 0 5px;
+    transition: color .5s;
+}
+.container label:hover {
+    color: #FFF;
+    background-color: #505050;
+}
+.container label:after {
+    content: '\276F';
+    transition: all .5s;
+}
+.container input:checked + label:after {
+    transition: all .5s;
+    transform: rotate(90deg);
+}
+.container input:checked + label + article {
+    height: auto;
+    margin-top: -5px;
+    padding: 20px;
+}
